@@ -5,6 +5,7 @@ from django.db import models
 
 class Category(models.Model):
     name_service = models.CharField('Название услуги', max_length=50)
+    # slug_service = models.SlugField(max_length=255, blank=True, db_index=True, default='')
     about_service = models.CharField('Описание услуги', max_length=50)
 
     def __str__(self):
@@ -13,6 +14,23 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Услуга'
         verbose_name_plural = 'Услуги'
+
+
+class Procedure(models.Model):
+    name=models.CharField('Название процедуры', max_length=50)
+    price = models.DecimalField('Цена процедуры', max_digits=7, decimal_places=2)
+    cat = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, related_name='procedures')
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Процедура'
+        verbose_name_plural = 'Процедуры'
+
+
+
 
 
 class Records(models.Model):

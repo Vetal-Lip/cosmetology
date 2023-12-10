@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Category
+from .models import Category, Procedure
 from .forms import RecordsForm
 
 # Create your views here.
@@ -8,7 +8,10 @@ from .forms import RecordsForm
 
 def index(request):
     categories = Category.objects.all()
-    # print(categories)
+    # massage = Category.objects.get(pk=1)
+    # print(massage.procedures.all())
+    # for p in procedures:
+    #     print(p.cat.name_service)
     return render(request, 'main/services.html', {'categories': categories})
 
 
@@ -36,3 +39,19 @@ def record(request):
     }
 
     return render(request, 'main/record.html', data)
+
+def show_category(request, category_id):
+    categories = Category.objects.all()
+    description = Category.objects.get(pk=category_id).about_service
+    cat = Category.objects.get(pk=category_id)
+    procedure = cat.procedures.all()
+    id = category_id
+    print(category_id)
+    data = {
+        'categories': categories,
+        'procedures':procedure,
+        'description':description,
+        'id':id,
+        
+    }
+    return render(request, 'main/procedures.html', data)

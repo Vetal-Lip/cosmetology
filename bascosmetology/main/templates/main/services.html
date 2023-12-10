@@ -4,9 +4,17 @@
 <ul class="service_and_price-list">
   {% for el in categories%}
   <li class="service_and_price-list_item">
-    <a href="#" class="service_and_price-link">{{el.name_service}}</a>
-    <p>{{el.about_service}}</p>
+    <a href="{% url 'category' el.id%}" class="service_and_price-link"
+      >{{el.name_service}}</a
+    >
   </li>
   {%endfor%}
 </ul>
+
+<div>
+  <p class="service_and_price-content">
+    Консультация 700 р. Если процедура сразу, консультация бесплатно.
+  </p>
+</div>
+
 {% endblock %}

@@ -111,11 +111,18 @@
           </div>
         </div>
       </section>
-      <section class="service_and_price" name="services">
+      <section class="service_and_price">
         <a name="services"></a>
         <div class="container">
           <h2 class="service_and_price-title">Услуги и цены</h2>
-          {% block services%} {% endblock %}
+          <div class="service_and_price-wrapper">
+            {% block services%} {% endblock %}
+            <!-- view procedures -->
+
+            {% if procedures%}
+            <!-- 124 -->
+            {% include 'main/procedures.html'%} {% endif%}
+          </div>
         </div>
       </section>
       <section class="contacts">

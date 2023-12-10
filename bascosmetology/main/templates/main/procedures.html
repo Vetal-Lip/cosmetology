@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/procedures.css' %}" />
+    <title>Процедуры</title>
+  </head>
+  <body>
+    <main>
+      <section class="service_and_price">
+        <div class="container">
+          <h2 class="service_and_price-title">Услуги и цены</h2>
+          <div class="service_and_price-wrapper">
+            <ul class="service_and_price-list">
+              {% for el in categories%} {% if el.id == id%}
+              <li class="service_and_price-list_item">
+                <a
+                  href="{% url 'category' el.id%}"
+                  class="service_and_price-link active"
+                  >{{el.name_service}}</a
+                >
+              </li>
+              {%else%}
+              <li class="service_and_price-list_item">
+                <a
+                  href="{% url 'category' el.id%}"
+                  class="service_and_price-link"
+                  >{{el.name_service}}</a
+                >
+              </li>
+
+              {% endif %} {%endfor%}
+              <li class="service_and_price-list_item">
+                <a href="{% url 'home' %}">
+                  <img
+                    src="{% static 'main/img/button_arrow.png' %}"
+                    alt="main"
+                    class="procedure-arrow"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <div>
+              {% for el in categories%} {% if el.id == id%}
+
+              <p class="service_and_price-content">{{el.about_service}}</p>
+              {% endif %} {%endfor%}
+            </div>
+          </div>
+
+          {% for el in procedures%}
+          <div class="procedures-wrapper">
+            <div class="procedures-name">{{el.name}}</div>
+            <div class="procedures-border"></div>
+            <div class="procedures-price">{{el.price}} руб.</div>
+          </div>
+          {%endfor%}
+          <div class="record-btn">
+            <a href="{%url 'record'%}"
+              ><button class="button-primary">Записаться</button></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
