@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}" />
+    <link rel="stylesheet" href="{% static 'main/css/record.css'%}" />
+    <title>Запись на процедуру</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <a href="{% url 'home' %}" class="modal-close_btn"
+          ><img src="{% static 'main/img/modal-close_btn.png'%}" alt="close" />
+        </a>
+        <h1>Запись на процедуру</h1>
+        <hr />
+
+        <form method="POST" class="modal-form">
+          {% csrf_token %}
+          <!-- RecordsForm -->
+          {{form}}
+          <div style="color: red">{{error}}</div>
+
+          <button type="submit" class="button-primary">Записаться</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/record.css' %}" />
+    <title>{% block title%}{% endblock %}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <a href="{% url 'home' %}" class="modal-close_btn"
+          ><img src="{% static 'main/img/modal-close_btn.png'%}" alt="close" />
+        </a>
+        {%block content%}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

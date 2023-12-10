@@ -1,0 +1,178 @@
+.container {
+  width: 1510px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 148px;
+}
+
+.header {
+  margin-bottom: 205px;
+}
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-item {
+  display: block;
+  margin-left: 40px;
+  transition: transform 0.6s ease;
+}
+
+.list-item_link {
+  box-sizing: border-box;
+
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 24.8px */
+  text-decoration: none;
+}
+
+.list-item:hover,
+.list-item_link:hover {
+  font-weight: 600;
+  transform: scale(1.05);
+  color: #549008;
+}
+
+.list-item--bold .list-item_link {
+  color: #fff;
+}
+
+.nav-list--register {
+  margin-left: 40px;
+}
+.nav-list--register li {
+  margin-left: 10px;
+}
+
+.header-content {
+  width: 50%;
+}
+
+.header-title {
+  color: #f5f5f5;
+  font-family: Georgia;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 45px;
+}
+
+.header-subtitle {
+  width: 40%;
+  color: #f9fff2;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 24.8px */
+  margin-bottom: 21px;
+}
+
+.button-primary {
+  color: #fff;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  width: 339.066px;
+  height: 65.205px;
+  /* transform: rotate(-8.008deg); */
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #549008;
+}
+
+.button-secondary {
+  color: #fff;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px 15px;
+
+  /* transform: rotate(-8.008deg); */
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #909090;
+}
+
+.button-secondary:hover {
+  background-color: #549008;
+}
+
+/* start styles for section service_and_price */
+.service_and_price {
+  width: 100%;
+  background-color: #ecf5e0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.service_and_price-title {
+  color: #282828;
+  font-family: Georgia;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.service_and_price-list_item {
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.service_and_price-link {
+  color: #282828;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-decoration: none;
+}
+
+.service_and_price-link:hover {
+  color: #549008;
+  text-align: center;
+  font-family: Ephesis;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+/* end styles for section service_and_price */

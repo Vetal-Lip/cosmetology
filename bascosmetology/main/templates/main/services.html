@@ -1,0 +1,12 @@
+{% extends 'main/layout.html'%} {% block title%}BasCosmetology{% endblock %}
+<!-- 12344 -->
+{%block services%}
+<ul class="service_and_price-list">
+  {% for el in categories%}
+  <li class="service_and_price-list_item">
+    <a href="#" class="service_and_price-link">{{el.name_service}}</a>
+    <p>{{el.about_service}}</p>
+  </li>
+  {%endfor%}
+</ul>
+{% endblock %}

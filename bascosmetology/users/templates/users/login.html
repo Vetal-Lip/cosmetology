@@ -1,0 +1,10 @@
+{% extends 'users/layout.html'%} {% block title%}login{% endblock %}
+<!-- main contaent -->
+{%block content%}
+<h1>Авторизация</h1>
+<form method="post" class="modal-form">
+  {% csrf_token %} {{form.as_p}}
+  <p style="color: red">{{error}}</p>
+  <p><button type="submit" class="button-secondary">Войти</button></p>
+</form>
+{% endblock %}

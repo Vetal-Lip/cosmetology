@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+  </head>
+  <body>
+    <div
+      class="wrapper"
+      style="
+        background: url('static/main/img/bg_main.jpg') no-repeat;
+        background-size: 100%;
+      "
+    >
+      <header class="header">
+        <div class="container">
+          <div class="flex-container">
+            <h1>
+              <a href="{% url 'home'%}"
+                ><img
+                  src="{% static 'main/img/logo_header.png' %}"
+                  alt="Bas-Cosmetology"
+              /></a>
+            </h1>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="list-item">
+                  <a href="#" class="list-item_link">Обо мне</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-item_link">Услуги</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-item_link">Отзывы</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-item_link">FAQ</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-item_link">Блог</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-item_link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="nav-list nav-list--register">
+                {% if user.is_active%}
+                <li class="list-item list-item--bold">
+                  <a href="#" class="list-item_link"
+                    >{{ user.username|upper}}</a
+                  >
+                </li>
+                <li class="list-item list-item--bold">|</li>
+                <li class="list-item list-item--bold">
+                  <a href="{% url 'users:logout'%}" class="list-item_link"
+                    >Выйти</a
+                  >
+                </li>
+                {% else %}
+                <li class="list-item list-item--bold">
+                  <a href="{% url 'users:login'%}" class="list-item_link"
+                    >Войти</a
+                  >
+                </li>
+                <li class="list-item list-item--bold">|</li>
+                <li class="list-item list-item--bold">
+                  <a href="{% url 'users:register'%}" class="list-item_link"
+                    >Регистрация</a
+                  >
+                </li>
+                {%endif%}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="header-content">
+          <h1 class="header-title">
+            Профессиональная работа над качеством кожи
+          </h1>
+          <p class="header-subtitle">
+            Чистка лица, лечение акне, спа уходы, массаж лица, увеличение губ в
+            Москве
+          </p>
+          <a href="{%url 'record'%}"
+            ><button class="button-primary">Записаться</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="service_and_price">
+        <div class="container">
+          <h2 class="service_and_price-title">Услуги и цены</h2>
+          {% block services%} {% endblock %}
+        </div>
+      </section>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
