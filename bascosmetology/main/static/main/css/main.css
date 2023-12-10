@@ -107,6 +107,11 @@
   background-color: #549008;
 }
 
+.button-primary--footer {
+  color: #000;
+  background-color: #fff;
+}
+
 .button-secondary {
   color: #fff;
 
@@ -227,3 +232,118 @@
   line-height: 130%;
 }
 /* end styles for section service_and_price */
+
+/* end styles for section contacts */
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contacts-title {
+  margin-bottom: 60px;
+  color: #282828;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contacts-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacts-list-item {
+  margin-bottom: 20px;
+}
+
+.contacts-list-item p {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 155%;
+}
+
+.nested-list {
+  margin-left: 30px;
+}
+
+.nested-list-item p,
+.nested-list-item a {
+  text-decoration: none;
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+
+.nested-list-item a:hover {
+  cursor: pointer;
+  color: #549008;
+}
+/* end styles for section contacts */
+
+/* end styles for section footer */
+.footer {
+  background-color: #549008;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-lists {
+  display: flex;
+}
+
+.footer-list {
+  margin-right: 50px;
+}
+
+.footer-lists-title {
+  color: #f9fff2;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 155%;
+}
+
+.footer-list-item a {
+  text-decoration: none;
+  color: #f9fff2;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  color: #f9fff2;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+/* end styles for section footer */

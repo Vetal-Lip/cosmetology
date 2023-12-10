@@ -45,7 +45,7 @@
                   <a href="#" class="list-item_link">Блог</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-item_link">Контакты</a>
+                  <a href="#contacts" class="list-item_link">Контакты</a>
                 </li>
               </ul>
               <ul class="nav-list nav-list--register">
@@ -109,7 +109,6 @@
             </div>
             <a href="{%url 'about'%}" class="about-link">обо мне</a>
           </div>
-          {% block about%} {% endblock %}
         </div>
       </section>
       <section class="service_and_price" name="services">
@@ -119,7 +118,101 @@
           {% block services%} {% endblock %}
         </div>
       </section>
-      {% block content %}{% endblock %}
+      <section class="contacts">
+        <a name="contacts"></a>
+        <div class="container">
+          <h2 class="contacts-title">Контакты</h2>
+          <div class="contacts-content">
+            <ul class="contacts-list">
+              <li class="contacts-list-item">
+                <p>Время работы:</p>
+                <ul class="nested-list">
+                  <li class="nested-list-item">
+                    <p>пн. - пт.: с 9:00 до 20:00</p>
+                  </li>
+                  <li class="nested-list-item">
+                    <p>сб. - вс.: с 10:00 до 17:00</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="contacts-list-item">
+                <p>Рабочий кабинет:</p>
+                <ul class="nested-list">
+                  <li class="nested-list-item">
+                    <p>г. Москва, Нагатинский затон</p>
+                  </li>
+                  <li class="nested-list-item"><p>(метро Коломенская)</p></li>
+                </ul>
+              </li>
+              <li class="contacts-list-item">
+                <p>Контакты:</p>
+                <ul class="nested-list">
+                  <li class="nested-list-item">
+                    <a href="tel:+11231234567">тел. : +1 (123) 123 45 67</a>
+                  </li>
+                  <li class="nested-list-item">
+                    <p>Instagram: @my_instagram</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="contacts-list-item">
+                <p>Эл. почта:</p>
+                <ul class="nested-list">
+                  <li class="nested-list-item">
+                    <a href="mailto: mail@mail.ru">mail@mail.ru</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="map">
+              <img src="{% static 'main/img/map.jpg' %}" alt="address" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-logo">
+            <a href="{% url 'home'%}"
+              ><img
+                src="{% static 'main/img/logo_footer.png' %}"
+                alt="Bas-Cosmetology"
+            /></a>
+            <a href="{%url 'record'%}"
+              ><button class="button-primary button-primary--footer">
+                Записаться
+              </button></a
+            >
+          </div>
+          <div class="footer-lists">
+            <ul class="footer-list">
+              <h4 class="footer-lists-title">Навигация</h4>
+              <li class="footer-list-item"><a href="#services">Услуги</a></li>
+              <li class="footer-list-item"><a href="#contacts">Контакты</a></li>
+              <li class="footer-list-item"><a href="#">Отзывы</a></li>
+            </ul>
+            <ul class="footer-list">
+              <h4 class="footer-lists-title">Помощь</h4>
+              <li class="footer-list-item"><a href="#">FAQ</a></li>
+              <li class="footer-list-item">
+                <a href="#">Конфиденциальность</a>
+              </li>
+            </ul>
+            <ul class="footer-list">
+              <h4 class="footer-lists-title">Социальные сети</h4>
+              <li class="footer-list-item"><a href="#">Instagram</a></li>
+              <li class="footer-list-item"><a href="#">WhatsApp</a></li>
+              <li class="footer-list-item"><a href="#">Telegram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; BAScosmetology. Все права зщищены</p>
+          <p>дизайн сайта А Соколова</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
