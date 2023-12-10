@@ -30,10 +30,10 @@
             <nav class="nav">
               <ul class="nav-list">
                 <li class="list-item">
-                  <a href="#" class="list-item_link">Обо мне</a>
+                  <a href="#about" class="list-item_link">Обо мне</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-item_link">Услуги</a>
+                  <a href="#services" class="list-item_link">Услуги</a>
                 </li>
                 <li class="list-item">
                   <a href="#" class="list-item_link">Отзывы</a>
@@ -95,7 +95,25 @@
       </div>
     </div>
     <main>
-      <section class="service_and_price">
+      <section class="about">
+        <a name="about"></a>
+        <div class="container">
+          <div class="about-content">
+            <div class="about-title">
+              Привет, меня зовут <i class="about-title--italic">Name</i>, я
+              косметолог. <br />
+              Уже более 5 лет с любовью работаю над
+              <i class="about-title--italic">вашей</i> красотой и
+              <i class="about-title--italic">здоровьем</i> в Москве и других
+              городах России...
+            </div>
+            <a href="{%url 'about'%}" class="about-link">обо мне</a>
+          </div>
+          {% block about%} {% endblock %}
+        </div>
+      </section>
+      <section class="service_and_price" name="services">
+        <a name="services"></a>
         <div class="container">
           <h2 class="service_and_price-title">Услуги и цены</h2>
           {% block services%} {% endblock %}

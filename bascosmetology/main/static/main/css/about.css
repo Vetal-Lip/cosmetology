@@ -1,0 +1,54 @@
+.about--wrapper {
+  width: 100%;
+  /* margin-top: 20vh; */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.about-word {
+  color: #909090;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 24.8px */
+  letter-spacing: 20.8px;
+}
+
+.about-principles {
+  max-width: 380px;
+  color: #282828;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 24.8px */
+}
+
+.about-education {
+  max-width: 500px;
+  color: #282828;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 24.8px */
+}
+
+.education-title {
+  color: #909090;
+  text-align: center;
+  font-family: Annabelle;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 155%;
+}
+
+.about_to_home_button {
+  transform: rotate(180deg);
+}

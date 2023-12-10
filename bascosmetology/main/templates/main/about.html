@@ -1,5 +1,95 @@
-{% extends 'main/layout.html'%} {% block title%}About me page{% endblock %}
-{%block content%}
-<h1>About me</h1>
-<p>content for about_me page</p>
-{% endblock %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}" />
+    <link rel="stylesheet" href="{% static 'main/css/record.css'%}" />
+    <link rel="stylesheet" href="{% static 'main/css/about.css'%}" />
+    <title>Обо мне</title>
+  </head>
+  <body>
+    <div class="about--wrapper">
+      <div class="form-wrapper">
+        <a href="{% url 'home' %}" class="modal-close_btn"
+          ><img src="{% static 'main/img/modal-close_btn.png'%}" alt="close" />
+        </a>
+
+        <div class="about-content">
+          <div class="about-title">
+            Привет, меня зовут <i class="about-title--italic">Name</i>, я
+            косметолог. <br />
+            Уже более 5 лет с любовью работаю над
+            <i class="about-title--italic">вашей</i> красотой и
+            <i class="about-title--italic">здоровьем</i> в Москве и других
+            городах России...
+          </div>
+          <p class="about-word">обо мне</p>
+          <img src="{% static 'main/img/button_arrow.png'%}" alt="arrow" />
+          <div class="about-principles">
+            <p>
+              С первого дня моими базовыми принципами работы стали
+              доброжелательность, чуткое отношение и высокий уровень
+              профессионализма.
+            </p>
+            <p>
+              Сейчас мой кабинет оснащен на уровне специализированных клиник и
+              студий.
+            </p>
+            <p>
+              С первых секунд пребывания в косметологическом кабинете вы
+              окунётесь в атмосферу уюта и заботы. Всегда рада как постоянным,
+              так и новым клиентам.
+            </p>
+          </div>
+          <div class="about-education">
+            <h3 class="education-title">Образование</h3>
+            <p>
+              В 2013 году окончила ТБМК – по специальности Медицинская сестра.
+              2015 год – институт массажа и косметологии (Косметолог)
+              Учебно-методический центр Мартинекс – мезотерапия,
+              биоревитализация, пилинги.
+            </p>
+            <p>
+              А также обучалась контурной пластике, шугарингу всех зон,
+              проходила мастер классы по косметике: Стикс, Дольче энжл, Нью
+              Лайн, Egia, Элдан, GiGi, Ella Bashe.
+            </p>
+            <p>
+              Прошла курсы по массажу лица (миофасциальный массаж,
+              биоэнергетический ритуал Гуа Ша, сахарный массаж, пластифицирующий
+              массаж, классический массаж, морфоструктурирующий массаж V -
+              Шейпинг).
+            </p>
+            <p>
+              За 5 лет было пройдено множество семинаров и курсов повышения
+              квалификации по узко профильным эстетическим проблемам и получено
+              более 60-ти сертификатов и дипломов.
+            </p>
+          </div>
+        </div>
+        <a href="{% url 'home' %}"
+          ><img
+            src="{% static 'main/img/button_arrow.png'%}"
+            alt="home"
+            class="about_to_home_button"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <h1>Запись на процедуру</h1>
+<hr />
+
+<form method="POST" class="modal-form">
+  {% csrf_token %} -->
+<!-- RecordsForm -->
+<!-- {{form}}
+  <div style="color: red">{{error}}</div>
+
+  <button type="submit" class="button-primary">Записаться</button>
+</form> -->
